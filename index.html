@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidate LinkedIn Verification</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+}
+.container{
+    width:380px;
+    margin:60px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#e53935;
+    text-align:center;
+    margin-bottom:25px;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+button{
+    width:100%;
+    padding:13px;
+    background:#e53935;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background:#c62828;
+}
+#msg{
+    display:none;
+    margin-top:20px;
+    color:green;
+    text-align:center;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">ZOHO</div>
+
+<form id="form">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="url" placeholder="LinkedIn Profile URL" required>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+<div id="msg">
+Your LinkedIn profile has been submitted successfully.<br>
+Our HR team will contact you shortly.
+</div>
+
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+
+document.getElementById("form").style.display="none";
+document.getElementById("msg").style.display="block";
+});
+</script>
+
+</body>
+</html>
